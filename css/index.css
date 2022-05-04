@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root{
+    --primary-color: #4e00f7;
+    --secondary-color: #fff;
+    --tertiary-color: #ffa500;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    background: #f1f1f1;
+}
+html{
+    scroll-behavior: smooth;
+}
+button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.home{
+    width: 100%;
+    height: 70vh;
+    background: var(--primary-color);
+}
+.home a{
+    color:var(--secondary-color);
+}
+
+.home i{
+    color: var(--secondary-color);
+}
+.home header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    width:100%;
+    transition: all .3s ease;
+    z-index: 98;
+}
+.home .hamburger_menu{
+    display: none;
+}
+.home .brand_name a{
+    font-size: 30px;
+}
+.home ul{
+    display: flex;
+}
+.home ul li{
+    margin:0 10px;
+}
+.home ul li a{
+    font-size: 18px;
+    text-transform: capitalize;
+    position: relative;
+    padding: 10px;
+}
+.home ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height:2px;
+    background: var(--tertiary-color);
+    transition: all .3s ease;
+    bottom:0;
+    left:0;
+}
+.home ul li a:hover:after{
+    width: 100%;
+}
+.home ul li a:hover{
+    color: var(--tertiary-color);
+}
+.scrolling-active {
+    background: var(--secondary-color);
+    color: #000;
+    position: fixed;
+    transition: all .3s ease;
+}
+.scrolling-active a {
+    color: #000;
+}
+.scrolling-active i {
+    color: #000;
+}
+
+#navbar_mobile{
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    background: #fff;
+    top:0;
+    right:0;
+    z-index: 99;
+    transition: all .4s ease;
+}
+#navbar_mobile .close_nav{
+    padding: 30px;
+}
+#navbar_mobile .close_nav i{
+    font-size: 30px;
+    padding: 10px;
+    margin-left:150px;
+}
+#navbar_mobile ul {
+    padding: 30px;
+}
+#navbar_mobile ul li{
+    margin: 10px 0;
+}
+#navbar_mobile ul li a{
+    font-size: 25px;
+    padding: 10px 0;
+    transition: all .3s ease;
+    color: #000;
+}
+#navbar_mobile ul li a:hover{
+    color: var(--tertiary-color);
+    transition: all .3s ease
+}
+
+
+.home .home_content{
+    width:100%;
+    height:100%;
+    display: flex;
+}
+.home .home_content .text_container{
+    width:70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 365px;
+    margin-bottom: 200px;
+    color: var(--secondary-color);
+    flex-direction: column;
+}
+.home .home_content .text_container h1{
+    font-size: 55px;
+    line-height: 72px;
+}
+.home .home_content .text_container p{
+    color: #d1d1d1;
+    padding: 10px 0;
+}
+
+.home .home_content .text_container button{
+    margin: 30px 0;
+}
+
+.home .home_content .text_container button a{
+    padding: 10px 30px;
+    background: #f1f1f1b9;
+    color: var(--secondary-color);
+    font-size: 20px;
+    text-transform: capitalize;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+.home .home_content .text_container button a:hover{
+    background: var(--tertiary-color);
+}
+.home .home_content .image_container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+.home .home_content .image_container img{
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+    margin-right: 650px;
+}
+
+/* services */
+.services{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.services .card{
+    width:300px;
+    min-height:310px;
+    overflow: hidden;
+    padding: 40px 30px;
+    background: var(--secondary-color);
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+    margin: 20px;
+    position: relative;
+}
+.services .card img{
+    width: 55px;
+    margin-bottom: 10px;
+}
+.services .card h1{
+    font-size: 18px;
+    font-weight: 500;
+}
+.services .card p{
+    font-weight: normal;
+    font-size: 14px;
+    padding: 10px 0;
+    color:#6d6d6d;
+}
+.services .card button{
+    margin: 10px 0;
+}
+.services .card button a{
+    color: var(--secondary-color);
+    background: #dedede;
+    padding: 10px 12px;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.services .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height:2px;
+    background: var(--primary-color);
+    transition: all .4s ease;
+}
+
+.services .card:hover:after{
+    width:100%
+}
+
+.services .card:hover > button a{
+    background: var(--primary-color);
+    transition: all .3s ease;
+}
+
+/* about */
+
+.about{
+    width:100%;
+    min-height:50vh;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.928),
+    rgba(0, 4, 255, 0.722)), url(../images/about.jpg) no-repeat top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 30px;
+}
+.about h1{
+    font-weight: normal;
+    font-size: 35px;
+}
+.about p{
+    color: #d1d1d1;
+    font-size: 13px;
+    font-weight: normal;
+}
+.about button{
+    margin: 40px 0;
+}
+.about button a{
+    background: var(--secondary-color);
+    color: #000;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+.about button a:hover{
+    color:var(--secondary-color);
+    background: #000;
+}
+
+/* pricing */
+.pricing{
+    width:100%;
+    padding: 30px;
+}
+.pricing h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 35px;
+    text-transform: capitalize;
+    padding:30px 0;
+}
+.pricing .cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pricing .cards .plan_card{
+    width:350px;
+    min-height: 520px;
+    background: var(--secondary-color);
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+}
+.pricing .cards .plan_card h2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.pricing .cards .plan_card hr{
+    border:none;
+    border-top:1px solid #ecececec;
+}
+.pricing .cards .plan_card h1{
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    padding:40px 0;
+}
+.pricing .cards .plan_card h1 span{
+    font-size: 14px;
+    color: #cbcbcb;
+    font-weight: normal;
+}
+.pricing .cards .plan_card p{
+    font-size: 13px;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.pricing .cards .plan_card ul li span{
+    color: #00b700;
+    letter-spacing: 10px;
+
+}
+.pricing .cards .plan_card ul li{
+    font-size: 14px;
+}
+.pricing .cards .plan_card .plan_btn{
+    text-align: center;
+    margin-top: 40px;
+}
+.pricing .cards .plan_card .plan_btn a{
+    padding: 10px 30px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+
+.pricing_one{
+    color: #00b900;
+}
+.pricing_two{
+    color: #0080ff;
+}
+.pricing_three{
+    color: #ff5900;
+}
+
+.pricing .cards .plan_card .first_plan_btn a{
+    background: rgba(0, 183, 0, 0.374);
+    color:green;
+} 
+.pricing .cards .plan_card .first_plan_btn a:hover{
+    background: #00c400;
+    color: var(--secondary-color);
+}
+.pricing .cards .plan_card .second_plan_btn a{
+    background: rgb(0, 128, 255, 0.374);
+    color: rgb(0, 128, 255);
+} 
+.pricing .cards .plan_card .second_plan_btn a:hover{
+    color: var(--secondary-color);
+    background: rgb(0, 128, 255);
+}
+.pricing .cards .plan_card .third_plan_btn a {
+    background: rgb(255, 89, 0, 0.374);
+    color: rgb(255, 89, 0);
+}
+
+.pricing .cards .plan_card .third_plan_btn a:hover {
+    color: var(--secondary-color);
+    background: rgb(255, 89, 0);
+}
+/* contact footer */
+.contact{
+    width:100%;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+.contact .upper_footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px 30px;
+}
+.contact .upper_footer .one, .contact .upper_footer .two, .contact .upper_footer .three{
+    width: 400px;
+}
+.contact .upper_footer .one h4{
+    font-size: 20px;
+    padding: 10px 0;
+}
+.contact .upper_footer .one p{
+    color: #d1d1d1;
+    font-weight: normal;
+    font-size: 14px;
+}
+.contact .upper_footer .one h5{
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+.contact .upper_footer .one .icons i{
+    cursor: pointer;
+    padding: 10px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+.contact .upper_footer .one .icons i:hover{
+    background: #000;
+    color: var(--secondary-color);
+    transform: rotate(360deg);
+}
+.contact .upper_footer .two h3{
+    font-weight: 600;
+    padding:  10px 0;
+}
+.contact .upper_footer .two ul li{
+    margin: 10px 0;
+    color: #d1d1d1;
+}
+.contact .upper_footer .three h3{
+    font-weight: normal;
+    padding:  10px 0;
+}
+.contact .upper_footer .three form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .upper_footer .three form input{
+    width: 100%;
+    padding: 10px 20px;
+    border:none;
+    outline:none
+}
+.contact .upper_footer .three form button i{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: var(--tertiary-color);
+    font-size: 20px;
+}
+.contact .lower_footer{
+    text-align: center;
+    padding: 30px;
+}
+/* making resposive */
+
+@media only screen and (max-width:1860px){
+    .home .home_content .text_container {
+        padding: 0 265px;
+    }
+    .home .home_content .text_container h1{
+        font-size: 45px;
+        line-height: 60px;
+    }
+    .home .home_content .image_container img {
+        margin-right: 450px;
+    }
+}
+
+@media only screen and (max-width:1460px){
+    .home .home_content .text_container h1{
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+}
+@media only screen and (max-width:1160px){
+    .home .home_content .text_container {
+        padding: 0 130px;
+    }
+    .home .home_content .text_container h1{
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .home .home_content .image_container img{
+        margin-right: 250px;
+    }
+}
+@media only screen and (max-width:860px){
+    .home .home_content .text_container {
+        padding: 0 80px;
+    }
+    .home .home_content .text_container h1{
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .home .home_content .text_container p{
+        font-size: 13px;
+    }
+    .home .home_content .text_container button a{
+        padding: 5px 20px;
+        font-size: 15px;
+    }
+    .home .home_content .image_container img{
+        margin-right: 150px;
+    }
+}
+
+@media only screen and (max-width:660px){
+    .home ul{
+        display: none;
+    }
+    .home .hamburger_menu{
+        display: block;
+    }
+    .home .hamburger_menu i{
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .home header{
+        padding: 30px 20px;
+    }
+    .home .home_content{
+        flex-direction: column;
+        padding: 0;
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+    .home .home_content .text_container{
+        width: 100%;
+        padding: 0 30px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .home .home_content .text_container button{
+        margin-bottom: 30px;
+    }
+    .home .home_content .text_container button a {
+        font-size: 13px;
+    }
+    .home .home_content .image_container{
+        width: 100%;
+        padding: 0 30px;
+        margin-bottom: 0;
+    }
+    .home .home_content .image_container img{
+        width:100%;
+        margin-right: 0;
+    }
+}
